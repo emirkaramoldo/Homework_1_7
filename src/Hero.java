@@ -23,7 +23,6 @@ public abstract class Hero implements HavingSuperAbility {
         this.typeSuperAbility = typeSuperAbility;
     }
 
-    @Override
     public void applySuperAbility() {
         System.out.println("Герой применил способность " + this.typeSuperAbility);
     }
