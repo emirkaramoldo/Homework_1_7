@@ -1,31 +1,26 @@
-public class Medic extends Hero{
+public class Medic extends Hero {
+    private double healPoints;
 
-    private int healPoints;
-
-    // Конструктор
-    public Medic(int healPoints) {
-        this.healPoints = healPoints;
+    public Medic() {
+        this.healPoints = 100;
     }
 
-    // Геттер для healPoints
-    public int getHealPoints() {
-        return healPoints;
-    }
-
-    // Сеттер для healPoints
-    public void setHealPoints(int healPoints) {
-        this.healPoints = healPoints;
-    }
-
-    // Метод для увеличения опыта лечения
     public void increaseExperience() {
-        healPoints = (int) (healPoints * 1.10); // Увеличиваем healPoints на 10%
-        System.out.println("Medic увеличил очки лечения до " + healPoints);
+        this.healPoints *= 1.10;
+        System.out.printf("Новое значение healPoints: %.2f%n", this.healPoints);
     }
 
     @Override
     public void applySuperAbility() {
         setTypeSuperAbility("Омоложение");
         System.out.println("Medic применил суперспособность " + this.getTypeSuperAbility());
+    }
+
+    public double getHealPoints() {
+        return healPoints;
+    }
+
+    public void setHealPoints(double healPoints) {
+        this.healPoints = healPoints;
     }
 }

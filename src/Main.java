@@ -8,6 +8,11 @@ public class Main {
 
         for (Hero hero : heroes) {
             hero.applySuperAbility();
+
+            if (hero instanceof Medic) {
+                Medic medic = (Medic) hero;
+                medic.increaseExperience();
+            }
         }
     }
 }
